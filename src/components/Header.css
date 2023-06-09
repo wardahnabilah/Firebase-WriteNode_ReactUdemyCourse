@@ -42,8 +42,6 @@
 }
 
 .nav-item.btn {
-    font: inherit;
-    border: none;
     background-color: hsl(240, 62%, 43%);
     color: hsl(0, 0%, 100%);
 }

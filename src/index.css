@@ -12,3 +12,33 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+textarea {
+  resize: none;
+}
+
+button, input, textarea {
+  font: inherit;
+  border: none;
+} 
+
+.container {
+  width: 95%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.btn-primary {
+  width: max-content;
+  margin-inline: auto;
+  padding: .6rem 1rem;
+  border-radius: .5rem;
+  background-color: hsl(240, 62%, 43%);
+  color: hsl(0, 0%, 100%);
+}
+
+.btn-primary:hover {
+  cursor: pointer;
+}
