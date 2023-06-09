@@ -1,0 +1,54 @@
+.navbar {
+    width: 95%;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-block: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .125rem solid hsla(0, 6%, 70%, 0.15);
+}
+
+.logo {
+    display: flex;
+    gap: .4rem;
+    align-items: center;
+}
+
+.logo-image {
+    height: 2.5rem;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+}
+
+.nav {
+    display: flex;
+    gap: .5rem;
+}
+
+.nav-item {
+    padding: .6rem 1rem;
+    border-radius: .5rem;
+}
+
+.nav-item:hover {
+    cursor: pointer;
+}
+
+.nav-item.active {
+    background-color: hsl(0, 0%, 91%);
+}
+
+.nav-item.btn {
+    font: inherit;
+    border: none;
+    background-color: hsl(240, 62%, 43%);
+    color: hsl(0, 0%, 100%);
+}
+
+.nav-item.btn i {
+    margin-right: .5rem;
+    color: hsl(0, 0%, 100%);
+}

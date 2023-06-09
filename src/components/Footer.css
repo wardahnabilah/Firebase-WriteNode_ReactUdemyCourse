@@ -1,0 +1,10 @@
+.footer {
+    margin-top: auto;
+    padding: 1rem;
+    text-align: center;
+    border-top: .125rem solid hsla(0, 6%, 70%, 0.15);
+}
+
+.footer p {
+    font-size: .85rem;
+}
