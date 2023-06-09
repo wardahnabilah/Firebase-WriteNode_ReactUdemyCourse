@@ -1,0 +1,13 @@
+.notfound {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.notfound-img {
+    width: 18rem;
+    margin-inline: auto;
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 2rem .125rem hsla(0, 0%, 0%, 0.25);
+}
