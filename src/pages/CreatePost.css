@@ -1,0 +1,29 @@
+.create-heading {
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.create-form {
+    width: 85%;
+    max-width: 34rem;
+    margin-inline: auto;
+    display: grid;
+    gap: 1rem;
+}
+
+input, textarea {
+    padding-block: .75rem;
+    padding-left: 1.25rem;
+    border-radius: 1rem;
+    border: 2px solid hsl(0, 1%, 65%);
+}
+
+input:focus, textarea:focus {
+    outline-color: hsl(143, 62%, 27%);
+}
+
+.create-form button {
+    width: 100%;
+    margin-top: 1rem;
+    background-color: hsl(143, 62%, 43%);
+}
