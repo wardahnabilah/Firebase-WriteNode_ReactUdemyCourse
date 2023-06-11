@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import Logo from '../assets/images/logo.png'
-import "./Header.css"
 import { signInWithPopup, signOut } from 'firebase/auth'
 import { auth, provider } from '../firebase/config'
+import { useAuthContext } from '../context/AuthContext'
+import "./Header.css"
 
 export function Header() {
-  const [isLoggedIn, setIsLoggedIn] = useState(JSON.parse(localStorage.getItem("isLoggedIn")) || false)
-
+  const { isLoggedIn, setIsLoggedIn } = useAuthContext()
+  
   function handleLogin() {
     signInWithPopup(auth, provider)
     .then((result) => {
