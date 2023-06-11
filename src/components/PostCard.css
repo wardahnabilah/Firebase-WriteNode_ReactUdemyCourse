@@ -16,3 +16,18 @@
     border-radius: .75rem;
     font-size: .85rem;
 }
+
+.title {
+    margin-bottom: .75rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete {
+    color: rgb(190, 33, 33);
+    font-size: 1.125rem;
+}
+
+.delete:hover {
+    cursor: pointer;
+}
