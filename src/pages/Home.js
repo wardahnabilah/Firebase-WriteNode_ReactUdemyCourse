@@ -22,7 +22,7 @@ export function Home() {
     }
 
     getPosts()
-  }, [isLoggedIn, postUpdated])
+  }, [isLoggedIn, postUpdated, colRef])
   
   return (
     <main className="container">
