@@ -3,6 +3,7 @@ import { PostCard, SkeletonCard } from '../components'
 import { collection, getDocs } from 'firebase/firestore'
 import { db } from '../firebase/config'
 import { useAuthContext } from '../context/AuthContext'
+import { useDocTitle } from '../hooks/useDocTitle'
 
 export function Home() {
   const colRef = collection(db, "posts")
@@ -10,6 +11,8 @@ export function Home() {
   const [postUpdated, setPostUpdated] = useState(false)
   const { isLoggedIn } = useAuthContext()
   const [isLoading, setIsLoading] = useState(true)
+
+  useDocTitle("Home - WriteNode")
 
   useEffect(() => {
     async function getPosts() {

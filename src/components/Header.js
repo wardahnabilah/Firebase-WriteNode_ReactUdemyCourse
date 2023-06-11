@@ -11,8 +11,7 @@ export function Header() {
   
   function handleLogin() {
     signInWithPopup(auth, provider)
-    .then((result) => {
-      console.log(result);
+    .then(() => {
       localStorage.setItem("isLoggedIn", true)
       setIsLoggedIn(true)
     })
@@ -31,7 +30,7 @@ export function Header() {
             <span className="logo-text">WriteNode</span>
         </Link>
         <nav className="nav">
-            <NavLink to="/" className="nav-item active" end>Home</NavLink>
+            <NavLink to="/" className="nav-item" end>Home</NavLink>
             { isLoggedIn ? (<>
                               <NavLink to="/create" className="nav-item">Create Post</NavLink>
                               <button onClick={handleLogout} className="nav-item btn">Logout</button>

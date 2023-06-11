@@ -2,11 +2,14 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { collection, addDoc } from 'firebase/firestore'
 import { auth, db } from '../firebase/config'
+import { useDocTitle } from '../hooks/useDocTitle'
 import './CreatePost.css'
 
 export function CreatePost() {
   const colRef = collection(db, "posts")
   const navigate = useNavigate()
+
+  useDocTitle("Create Post - WriteNode")
 
   async function handleSubmit(event) {
     event.preventDefault()

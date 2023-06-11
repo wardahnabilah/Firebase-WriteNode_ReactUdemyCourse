@@ -1,11 +1,13 @@
 import React from 'react'
 import { Home } from '../pages'
+import { useAuthContext } from '../context/AuthContext'
 
 export default function ProtectedRoute({children}) {
-    const isLogin = true
+    const { isLoggedIn } = useAuthContext()
+
     return (
     <>
-        {isLogin ? children : <Home />}
+        {isLoggedIn ? children : <Home />}
     </>
   )
 }
