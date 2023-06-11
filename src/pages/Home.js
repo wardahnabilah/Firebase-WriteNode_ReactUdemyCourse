@@ -7,7 +7,8 @@ import { useAuthContext } from '../context/AuthContext'
 export function Home() {
   const colRef = collection(db, "posts")
   const [posts, setPosts] = useState([])
-  const { isLoggedIn, setIsLoggedIn } = useAuthContext()
+  const [postUpdated, setPostUpdated] = useState(false)
+  const { isLoggedIn } = useAuthContext()
 
   useEffect(() => {
     async function getPosts() {
@@ -16,7 +17,7 @@ export function Home() {
     }
 
     getPosts()
-  }, [isLoggedIn])
+  }, [isLoggedIn, postUpdated])
   
   return (
     <main className="container">
@@ -29,6 +30,8 @@ export function Home() {
                     title={title}
                     description={description}
                     createdBy={createdBy}
+                    postUpdated={postUpdated}
+                    setPostUpdated={setPostUpdated}
                 />
       })}
     </main>
